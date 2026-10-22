@@ -1,0 +1,10 @@
+data/raw/
+data/processed/
+*.XPT
+*.xpt
+*.zip
+*.parquet
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
