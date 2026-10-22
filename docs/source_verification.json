@@ -1,0 +1,69 @@
+{
+  "verified_at_utc": "2026-10-21T13:59:55+00:00",
+  "files": {
+    "xpt": {
+      "path": "data\\raw\\LLCP2023.XPT",
+      "bytes": 1205554400,
+      "sha256": "3d3bf8ef5195bde227828ddc4c90745b76e8b304f8f5b9a043b6d99895fd1615"
+    },
+    "docs": [
+      {
+        "path": "docs\\cdc\\2023-calculated-variables-version4-508.pdf",
+        "bytes": 1221083,
+        "sha256": "f2756dd4a38365e5e3adcb2ade949ff791f69b36a355b306c6101ead3c6c69e9"
+      },
+      {
+        "path": "docs\\cdc\\2023-Child-Weighting-Calculated-Variables-508.pdf",
+        "bytes": 197832,
+        "sha256": "f0be135b2f34e75d3ef4b6f7bf27139a7c0de96c506d8f2cf903b9669151abd9"
+      }
+    ]
+  },
+  "n_columns": {
+    "observed": 350,
+    "proposal_says": 350,
+    "codebook_documents": 344
+  },
+  "checks": {
+    "rows": {
+      "expected": 433323,
+      "observed": 433323,
+      "ok": true
+    },
+    "value_counts": {
+      "CVDINFR4": {
+        "ok": true,
+        "differences": {}
+      },
+      "CVDCRHD4": {
+        "ok": true,
+        "differences": {}
+      },
+      "CVDSTRK3": {
+        "ok": true,
+        "differences": {}
+      },
+      "_MICHD": {
+        "ok": true,
+        "differences": {}
+      }
+    },
+    "state_counts": {
+      "ok": true,
+      "differences": {}
+    },
+    "geographies": {
+      "expected": 52,
+      "observed": 52,
+      "ok": true
+    },
+    "kentucky_pennsylvania_absent": true,
+    "weight": {
+      "missing": 0,
+      "non_positive": 0,
+      "sum_of_weights": 254139829.00000003
+    },
+    "required_vars_missing": []
+  },
+  "all_checks_passed": true
+}

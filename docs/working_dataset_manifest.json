@@ -1,0 +1,60 @@
+{
+  "created_utc": "2026-10-22T01:35:48+00:00",
+  "source_xpt": "data\\raw\\LLCP2023.XPT",
+  "source_xpt_sha256": "3d3bf8ef5195bde227828ddc4c90745b76e8b304f8f5b9a043b6d99895fd1615",
+  "output": "data\\processed\\brfss2023_working.parquet",
+  "output_bytes": 8033186,
+  "output_sha256": "89a9229dc02692ff8c1766228de9ca9b00ed1e9b09e65c5527f3f4b36e5911b0",
+  "rows": 433323,
+  "columns": 29,
+  "column_names": [
+    "CVDINFR4",
+    "CVDCRHD4",
+    "CVDSTRK3",
+    "_MICHD",
+    "BPHIGH6",
+    "_RFHYPE6",
+    "CHOLCHK3",
+    "TOLDHI3",
+    "_RFCHOL3",
+    "DIABETE4",
+    "_BMI5",
+    "_BMI5CAT",
+    "_RFBMI5",
+    "_SMOKER3",
+    "_RFSMOK3",
+    "EXERANY2",
+    "_TOTINDA",
+    "_AGEG5YR",
+    "_AGE80",
+    "_AGE_G",
+    "_SEX",
+    "SEXVAR",
+    "_INCOMG1",
+    "_EDUCAG",
+    "_RACE",
+    "_STATE",
+    "_LLCPWT",
+    "_STSTR",
+    "_PSU"
+  ],
+  "all_columns_in_source": 350,
+  "recoding": "none (raw CDC codes)",
+  "checks_after_reload": {
+    "rows_ok": true,
+    "value_counts_ok": {
+      "CVDINFR4": true,
+      "CVDCRHD4": true,
+      "CVDSTRK3": true,
+      "_MICHD": true
+    },
+    "state_counts_ok": true,
+    "weight_ok": true,
+    "all_ok": true
+  },
+  "versions": {
+    "python": "3.12.10",
+    "pandas": "3.0.6",
+    "pyarrow": "26.0.0"
+  }
+}
