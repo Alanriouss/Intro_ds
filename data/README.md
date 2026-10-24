@@ -17,7 +17,7 @@ Owner: M2 (Data Engineer) · Reviewer: M6 (Ethics & Privacy) · Status: Steps 1-
 
 | Item | Value |
 |---|---|
-| Retrieval date | 20 Oct 2026 per file timestamp. **TODO: confirm in Chrome download history.** Proposal says 13 Sep 2026; M1 to reconcile |
+| Retrieval date | 20 Oct 2026 (file timestamp; confirmed with M2 on 24 Oct 2026). The 13 Sep 2026 in the proposal was the planned date, not the download date |
 | Retrieved by | Mai Hoàng Gia Bảo (M2) |
 | ZIP size / SHA-256 | 93,237,818 bytes / `d1ab80e4806a1d07bd3e40ec78c971ad9ff920f3ea5f6049780aeaa41ff31f43` |
 | XPT size / SHA-256 | 1,205,554,400 bytes / `3d3bf8ef5195bde227828ddc4c90745b76e8b304f8f5b9a043b6d99895fd1615` |
@@ -92,5 +92,5 @@ The file is git-ignored and shared through the team drive. Compare its SHA-256 w
 
 ## 9. Tools and AI use
 
-Python 3.12; pandas 3.0.6, numpy 2.5.4, pyreadstat 1.3.6, pyarrow (see `requirements.txt`). Variable definitions come from CDC's codebook and calculated-variable documentation; the CDC SAS logic is not re-implemented here.
+Python 3.12; pandas 3.0.6, numpy 2.5.4, pyreadstat 1.3.6, pyarrow (see `requirements.txt`). Notebook 02 also needs `jinja2` (table styling); the D2 run used Python 3.13 on macOS with the same package versions. Variable definitions come from CDC's codebook and calculated-variable documentation; the CDC SAS logic is not re-implemented here.
 AI assistance (Claude) was used to draft the scripts and the dictionary. Results were checked against the CDC codebook and by running the scripts locally (`docs/source_verification.json`). M6 records this in `docs/ai_use_note.md`.

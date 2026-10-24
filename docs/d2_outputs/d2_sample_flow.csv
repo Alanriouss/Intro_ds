@@ -1,0 +1,6 @@
+step,respondents,pct_of_working_dataset,lost_vs_previous
+"Working dataset (raw CDC file, 29 columns kept)",433323,100.0,0
+In the 48 states + DC,425106,98.10372401188029,8217
+... and CVD_ANY known,420322,96.99969768509864,4784
+... and all six risk flags known (RiskCount),325109,75.02694295017804,95213
+... and age known,321978,74.3043872584654,3131

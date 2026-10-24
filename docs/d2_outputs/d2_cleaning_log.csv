@@ -1,0 +1,64 @@
+step,variable,original,new_value,reason,rows_affected,pct_of_rows
+C1,_STATE,"66 Guam, 72 Puerto Rico, 78 U.S. Virgin Islands",row removed,Outside the 48 states + DC in the file; results are described as U.S. adults,8217,1.8962759881197166
+C2,all 29 columns,identical rows,none removed,Checked for duplicates; weight and PSU make true duplicates implausible,0,0.0
+C3,"_AGE80, _LLCPWT, _BMI5",range check,no change,All values inside the plausible range; no row dropped,0,0.0
+C4,_RFHYPE6 -> HTN_FLAG,1,0,No high blood pressure. CDC code 1 also holds 'pregnancy only' and 'borderline' answers (BPHIGH6 = 2 or 4); kept as 0 per CDC definition,250650,57.84368704176792
+C4,_RFHYPE6 -> HTN_FLAG,2,1,Told they have high blood pressure,172547,39.81948800317546
+C4,_RFHYPE6 -> HTN_FLAG,9,<NA>,"Unknown or missing: kept as NA, not coded as No",1909,0.4405489669369039
+C5,_RFCHOL3 -> CHOL_FLAG,1,0,Cholesterol not reported high,215131,49.64679926982874
+C5,_RFCHOL3 -> CHOL_FLAG,2,1,Told cholesterol is high,155586,35.90531774219232
+C5,_RFCHOL3 -> CHOL_FLAG,9,<NA>,"Unknown or missing: kept as NA, not coded as No",3229,0.7451716156308342
+C5,_RFCHOL3 -> CHOL_FLAG,blank,<NA>,"Never had cholesterol checked or unknown: NOT the same as normal cholesterol, kept as NA",51160,11.806435384228394
+C6,DIABETE4 -> DIABETES_FLAG,1,1,Diagnosed diabetes,58252,13.443089796756691
+C6,DIABETE4 -> DIABETES_FLAG,2,0,"Diabetes only during pregnancy: not chronic diabetes, coded 0",3216,0.7421715440906668
+C6,DIABETE4 -> DIABETES_FLAG,3,0,No diabetes,352433,81.3326317781424
+C6,DIABETE4 -> DIABETES_FLAG,4,0,"Pre-diabetes / borderline: not diabetes, coded 0",10239,2.3629024999826918
+C6,DIABETE4 -> DIABETES_FLAG,7,<NA>,"Unknown or missing: kept as NA, not coded as No",665,0.15346519801626038
+C6,DIABETE4 -> DIABETES_FLAG,9,<NA>,"Unknown or missing: kept as NA, not coded as No",296,0.0683093212222753
+C6,DIABETE4 -> DIABETES_FLAG,blank,<NA>,"Unknown or missing: kept as NA, not coded as No",5,0.0011538736692951908
+C7,_BMI5CAT -> OBESITY_FLAG,1,0,Underweight: not obese,6614,1.5263440897436784
+C7,_BMI5CAT -> OBESITY_FLAG,2,0,Normal weight: not obese,114409,26.4027065260787
+C7,_BMI5CAT -> OBESITY_FLAG,3,0,Overweight but not obese (BMI < 30),136818,31.574137537125885
+C7,_BMI5CAT -> OBESITY_FLAG,4,1,Obese (BMI >= 30),127187,29.351546075329487
+C7,_BMI5CAT -> OBESITY_FLAG,blank,<NA>,BMI not computable (height or weight missing): kept as NA,40078,9.248989783602532
+C8,_RFSMOK3 -> SMOKING_FLAG,1,0,Not a current smoker (former and never smokers),357811,82.57373829683631
+C8,_RFSMOK3 -> SMOKING_FLAG,2,1,Current smoker (every day or some days),44486,10.266244810453172
+C8,_RFSMOK3 -> SMOKING_FLAG,9,<NA>,"Unknown or missing: kept as NA, not coded as No",22809,5.263740904590802
+C9,_TOTINDA -> INACTIVE_FLAG,1,0,Had leisure-time physical activity in the past 30 days,320455,73.95291733879807
+C9,_TOTINDA -> INACTIVE_FLAG,2,1,No leisure-time physical activity in the past 30 days,103407,23.86372290416156
+C9,_TOTINDA -> INACTIVE_FLAG,9,<NA>,"Unknown or missing: kept as NA, not coded as No",1244,0.28708376892064347
+C10,CVDINFR4 -> MI_FLAG,1,1,Reported ever diagnosed,23087,5.327896280603614
+C10,CVDINFR4 -> MI_FLAG,2,0,Reported never diagnosed,399489,92.19196765461331
+C10,CVDINFR4 -> MI_FLAG,7,<NA>,"Unknown or missing: kept as NA, not coded as No",2276,0.5252432942631708
+C10,CVDINFR4 -> MI_FLAG,9,<NA>,"Unknown or missing: kept as NA, not coded as No",251,0.057924458198618585
+C10,CVDINFR4 -> MI_FLAG,blank,<NA>,"Unknown or missing: kept as NA, not coded as No",3,0.0006923242015771145
+C11,CVDCRHD4 -> CHD_FLAG,1,1,Reported ever diagnosed,23066,5.323050011192574
+C11,CVDCRHD4 -> CHD_FLAG,2,0,Reported never diagnosed,397856,91.8151125142215
+C11,CVDCRHD4 -> CHD_FLAG,7,<NA>,"Unknown or missing: kept as NA, not coded as No",3891,0.8979444894455175
+C11,CVDCRHD4 -> CHD_FLAG,9,<NA>,"Unknown or missing: kept as NA, not coded as No",290,0.06692467281912107
+C11,CVDCRHD4 -> CHD_FLAG,blank,<NA>,"Unknown or missing: kept as NA, not coded as No",3,0.0006923242015771145
+C12,CVDSTRK3 -> STROKE_FLAG,1,1,Reported ever diagnosed,18065,4.168945567163525
+C12,CVDSTRK3 -> STROKE_FLAG,2,0,Reported never diagnosed,405586,93.59900120695185
+C12,CVDSTRK3 -> STROKE_FLAG,7,<NA>,"Unknown or missing: kept as NA, not coded as No",1194,0.2755450322276916
+C12,CVDSTRK3 -> STROKE_FLAG,9,<NA>,"Unknown or missing: kept as NA, not coded as No",257,0.05930910660177281
+C12,CVDSTRK3 -> STROKE_FLAG,blank,<NA>,"Unknown or missing: kept as NA, not coded as No",4,0.0009230989354361527
+C13,CVD_ANY,"MI, CHD or stroke = Yes",1,Reported at least one of the three conditions (a 'Yes' counts even if another answer is missing),47670,11.00103156306035
+C13,CVD_ANY,all three = No,0,Reported none of the three,372652,85.9986661220383
+C13,CVD_ANY,no 'Yes' and at least one unknown,<NA>,"Cannot tell: excluded from prevalence, not counted as No",4784,1.1040263267816386
+C14,RiskCount,any of the 6 flags unknown,<NA>,Complete-case rule: RiskCount only when all six flags are known; RiskMissingCount keeps the number of unknown flags,97023,22.390457003205462
+C15,_AGEG5YR -> AGE_5YR / AGE_BAND,1,18-24 / 18-34,Age category label and five-band grouping,25786,5.950757287289158
+C15,_AGEG5YR -> AGE_5YR / AGE_BAND,2,25-29 / 18-34,Age category label and five-band grouping,20770,4.793191222252223
+C15,_AGEG5YR -> AGE_5YR / AGE_BAND,3,30-34 / 18-34,Age category label and five-band grouping,24278,5.602748988629729
+C15,_AGEG5YR -> AGE_5YR / AGE_BAND,4,35-39 / 35-44,Age category label and five-band grouping,26649,6.149915882609508
+C15,_AGEG5YR -> AGE_5YR / AGE_BAND,5,40-44 / 35-44,Age category label and five-band grouping,27873,6.432384156852971
+C15,_AGEG5YR -> AGE_5YR / AGE_BAND,6,45-49 / 45-54,Age category label and five-band grouping,26457,6.105607133708573
+C15,_AGEG5YR -> AGE_5YR / AGE_BAND,7,50-54 / 45-54,Age category label and five-band grouping,30530,7.045552624716436
+C15,_AGEG5YR -> AGE_5YR / AGE_BAND,8,55-59 / 55-64,Age category label and five-band grouping,33424,7.713414704504492
+C15,_AGEG5YR -> AGE_5YR / AGE_BAND,9,60-64 / 55-64,Age category label and five-band grouping,41108,9.486687759477341
+C15,_AGEG5YR -> AGE_5YR / AGE_BAND,10,65-69 / 65+,Age category label and five-band grouping,45306,10.455480092217584
+C15,_AGEG5YR -> AGE_5YR / AGE_BAND,11,70-74 / 65+,Age category label and five-band grouping,42825,9.88292797751331
+C15,_AGEG5YR -> AGE_5YR / AGE_BAND,12,75-79 / 65+,Age category label and five-band grouping,34036,7.854648841626223
+C15,_AGEG5YR -> AGE_5YR / AGE_BAND,13,80+ / 65+,Age category label and five-band grouping,38406,8.86313442859022
+C15,_AGEG5YR -> AGE_5YR / AGE_BAND,14,<NA>,Age unknown (code 14): kept as NA,7658,1.7672729118925143
+C16,IN_SAMPLE,"CVD_ANY, RiskCount and age all known",kept,Analysis-ready sample for D3 (complete case),321978,74.3043872584654
+C16,IN_SAMPLE,any of them unknown,not in sample,Complete-case limitation: respondents with a missing flag may differ from those without (see section 7),103128,23.799336753414888

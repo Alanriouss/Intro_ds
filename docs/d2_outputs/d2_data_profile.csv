@@ -1,0 +1,30 @@
+variable,label,role,dtype,n_rows,n_missing,pct_missing,special_code_rows,n_unique,min,max,pct_unusable
+CVDINFR4,Ever Diagnosed with Heart Attack,outcome,Int64,433323,3,0.0006923242015771145,2565,4,1.0,9.0,0.5926295165500101
+CVDCRHD4,Ever Diagnosed with Angina or Coronary Heart Disease,outcome,Int64,433323,3,0.0006923242015771145,4228,4,1.0,9.0,0.9764078989575906
+CVDSTRK3,Ever Diagnosed with a Stroke,outcome,Int64,433323,4,0.0009230989354361527,1470,4,1.0,9.0,0.3401619577082223
+_MICHD,Ever had CHD or MI,outcome,Int64,433323,4585,1.0581021547436902,0,2,1.0,2.0,1.0581021547436902
+BPHIGH6,Ever Told Blood Pressure High,risk_factor,Int64,433323,3,0.0006923242015771145,1916,6,1.0,9.0,0.4428567142754943
+_RFHYPE6,High Blood Pressure Calculated Variable,risk_factor,Int64,433323,0,0.0,1919,3,1.0,9.0,0.4428567142754943
+CHOLCHK3,How Long since Cholesterol Checked,risk_factor,Int64,433323,3,0.0006923242015771145,26446,9,1.0,9.0,6.103760935837701
+TOLDHI3,Ever Told Cholesterol Is High,risk_factor,Int64,433323,51812,11.956900510704486,3272,4,1.0,9.0,12.71199543989126
+_RFCHOL3,High Cholesterol Calculated Variable,risk_factor,Int64,433323,51811,11.956669735970626,3273,3,1.0,9.0,12.711995439891258
+DIABETE4,(Ever told) you had diabetes,risk_factor,Int64,433323,5,0.0011538736692951908,979,6,1.0,9.0,0.2270823381172936
+_BMI5,Computed body mass index,risk_factor,Int64,433323,40535,9.354453836976113,0,4099,1202.0,9984.0,9.354453836976113
+_BMI5CAT,Computed body mass index categories,risk_factor,Int64,433323,40535,9.354453836976113,0,4,1.0,4.0,9.354453836976113
+_RFBMI5,Overweight or obese calculated variable,risk_factor,Int64,433323,0,0.0,40535,3,1.0,9.0,9.354453836976113
+_SMOKER3,Computed Smoking Status,risk_factor,Int64,433323,0,0.0,23062,5,1.0,9.0,5.322126912257138
+_RFSMOK3,Current Smoking Calculated Variable,risk_factor,Int64,433323,0,0.0,23062,3,1.0,9.0,5.322126912257138
+EXERANY2,Exercise in Past 30 Days,risk_factor,Int64,433323,2,0.00046154946771807635,1249,4,1.0,9.0,0.28869919205765676
+_TOTINDA,Leisure Time Physical Activity Calculated Variable,risk_factor,Int64,433323,0,0.0,1251,3,1.0,9.0,0.28869919205765676
+_AGEG5YR,Reported age in five-year age categories calculated variable,demographic,Int64,433323,0,0.0,7779,14,1.0,14.0,1.795196654689458
+_AGE80,Imputed Age value collapsed above 80,demographic,Int64,433323,0,0.0,0,63,18.0,80.0,0.0
+_AGE_G,Imputed age in six groups,demographic,Int64,433323,0,0.0,0,6,1.0,6.0,0.0
+_SEX,Calculated sex variable,demographic,Int64,433323,0,0.0,0,2,1.0,2.0,0.0
+SEXVAR,Sex of Respondent,demographic,Int64,433323,0,0.0,0,2,1.0,2.0,0.0
+_INCOMG1,Computed income categories,demographic,Int64,433323,0,0.0,86623,8,1.0,9.0,19.990399771071463
+_EDUCAG,Computed level of education completed categories,demographic,Int64,433323,0,0.0,2325,5,1.0,9.0,0.5365512562222637
+_RACE,Computed Race-Ethnicity grouping,demographic,Int64,433323,86,0.019846627111877284,9484,9,1.0,9.0,2.208514203030995
+_STATE,State FIPS Code,demographic,Int64,433323,0,0.0,0,52,1.0,78.0,0.0
+_LLCPWT,Final weight: Land-line and cell-phone data,survey_design,float64,433323,0,0.0,0,241959,0.15910409943757337,69785.8209118426,0.0
+_STSTR,Sample Design Stratification Variable,survey_design,Int64,433323,0,0.0,0,2146,11011.0,782029.0,0.0
+_PSU,Primary Sampling Unit,survey_design,Int64,433323,0,0.0,0,26444,2023000001.0,2023026444.0,0.0
