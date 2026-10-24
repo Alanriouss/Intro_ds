@@ -1,9 +1,10 @@
 data/raw/
-data/processed/
+data/processed/*
+!data/processed/brfss2023_working.parquet
+!data/processed/brfss2023_clean.parquet
 *.XPT
 *.xpt
 *.zip
-*.parquet
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
