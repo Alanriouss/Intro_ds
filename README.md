@@ -86,7 +86,7 @@ The seed is fixed at 42 in every notebook; D2 and D3 use no randomness except th
 * Weighted prevalence of reported CVD rises with the number of risk factors: 2.2%, 5.4%, 10.9%, 18.6%, 25.6%, 33.3% and 39.7% for 0 to 6 factors; overall 9.90% (95% CI 9.68–10.12).
 * Each additional risk factor multiplies the odds of reported CVD by 1.84 (crude) and 1.61 after adjusting for age band and sex.
 * The candidate table cuts the sample into 15 groups (5 age bands × 3 risk bands) and marks a group as a priority candidate when it has at least 100 respondents with reported CVD, a confidence-interval half-width of at most 25% of its own prevalence, a lower confidence limit above the overall prevalence, and at least 5% of the total weighted CVD burden. Five groups qualify: age 65+ with 2–3 factors, 65+ with 4–6, 65+ with 0–1, 55–64 with 2–3 and 55–64 with 4–6. Together they are 37.5% of the weighted population and 76.4% of the reported CVD burden. The list does not change when the case minimum (50, 100, 200) and the interval-width limit (20%, 25%, 30%) are varied (`d3_sensitivity_priority_groups.csv`); the 5% burden floor was not varied.
-* The thresholds are the analyst's proposal. The product owner owns the final rule, including whether the 65+ group with only 0–1 factors should stay on the list.
+* The thresholds were proposed by the analyst and confirmed by the product owner on 11 Nov 2026: all five groups stay on the list, including the 65+ group with 0–1 factors (G13), which is on the list because of age rather than risk-factor count.
 
 ## Limitations
 

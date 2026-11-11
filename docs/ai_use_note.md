@@ -1,10 +1,10 @@
 # AI use note (draft)
 
-Status: **draft written from the repository history; to be reviewed and signed off by the Ethics and Privacy Officer (Dương Minh Chính).** Anything marked "confirm" needs the person named to check it against what they actually did.
+Status: **draft written from the repository history; attribution wording confirmed by the Product Owner on 12 Nov 2026 on behalf of the Ethics and Privacy Officer (Dương Minh Chính), who may still amend it.** Anything marked "confirm" needs the person named to check it against what they actually did.
 
 ## Tools
 
-Claude (Anthropic) was used as a coding and writing assistant by members of the team. The BRFSS data are public CDC data; no personal data were involved (Chính, confirm what was pasted into the tool).
+Claude (Anthropic) was used as a coding and writing assistant by members of the team. The BRFSS data are public CDC data; no personal data were involved. The Product Owner confirms that nothing private (passwords, tokens, personal information) was pasted into the tool in his own use; each other member confirms the same for their own use.
 
 ## What AI assistance was used for
 
@@ -28,4 +28,4 @@ Team members are responsible for every number and sentence they submit. AI-gener
 ## To complete before D4
 
 * Each member adds or corrects the rows above for their own part.
-* The Ethics and Privacy Officer confirms the attribution wording in `data/README.md`, section 4, and signs off this note.
+* The Ethics and Privacy Officer reviews the attribution wording in `data/README.md`, section 4, and signs off this note (the Product Owner confirmed the wording on 12 Nov 2026 in the meantime).

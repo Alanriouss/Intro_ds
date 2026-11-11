@@ -45,7 +45,7 @@ Suggested wording for the report and slides:
 
 > Data source: Centers for Disease Control and Prevention (CDC), Behavioral Risk Factor Surveillance System (BRFSS) 2023. This analysis was produced by students of International University, VNU-HCM and has not been reviewed or endorsed by CDC, HHS or the U.S. Government.
 
-Do not use CDC/HHS logos. Only analysis-necessary fields are kept, and no attempt is made to identify respondents (proposal Section 8). Wording to be confirmed by the Ethics and Privacy Officer (Dương Minh Chính) before the report.
+Do not use CDC/HHS logos. Only analysis-necessary fields are kept, and no attempt is made to identify respondents (proposal Section 8). Wording confirmed by the Product Owner (Vũ Tiến Dũng) on 12 Nov 2026, on behalf of the Ethics and Privacy Officer; the Officer may still amend it before the report.
 
 ## 5. Verification log (codebook cross-check)
 
