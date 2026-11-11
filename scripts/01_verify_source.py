@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 01_verify_source.py  --  M2 (Data Engineer), Step 1: verify the BRFSS 2023 download.
 

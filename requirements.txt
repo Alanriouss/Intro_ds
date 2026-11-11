@@ -1,7 +1,11 @@
-# Tested on Python 3.12 (Windows). Versions come from the M2 machine's install log.
+# Python 3.12 or newer. Versions below were used in the team's runs:
+#   notebook 01 and scripts: Python 3.12 (Windows)
+#   notebook 02 (D2):        Python 3.13.5 (macOS)
+#   notebook 03 (D3):        Python 3.14.2 (macOS)
 pandas==3.0.6
 numpy==2.5.4
-pyreadstat==1.3.6
-pyarrow==26.0.0    
-ipykernel          # only needed to run the notebooks in VS Code / Jupyter
-jinja2             # table styling in notebooks/02_d2_data_profiling_cleaning.ipynb (version printed in its setup cell)
+pyarrow==26.0.0
+pyreadstat==1.3.6     # only to rebuild the working file from the CDC XPT (notebook 01, scripts/)
+jinja2==3.1.6         # table styling in notebooks 02 and 03
+ipykernel             # only to run the notebooks in VS Code / Jupyter; pin the version from `pip show ipykernel`
+# matplotlib==         # visualisation lead: add the plotting library and the exact version used for the D3 charts

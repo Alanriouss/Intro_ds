@@ -1,7 +1,7 @@
 # Variable dictionary: BRFSS 2023 working dataset
 
-Owner: M2 · Source: CDC LLCP 2023 Codebook Report (Sep 10, 2024) and 2023 Calculated Variables (v12, May 23, 2024).
-Values are **raw codes as released by CDC**. No recoding has been done (M3 owns cleaning). Counts below are from the codebook (n = 433,323).
+Owner: Data Engineer (Mai Hoàng Gia Bảo) · Source: CDC LLCP 2023 Codebook Report (Sep 10, 2024) and 2023 Calculated Variables (v12, May 23, 2024).
+Values are **raw codes as released by CDC**. No recoding has been done here; cleaning is documented in `docs/d2_outputs/d2_cleaning_log.csv`. Counts below are from the codebook (n = 433,323).
 
 **Special codes (general rule):** 7 / 77 / 777 = Don't know; 9 / 99 / 999 = Refused; BLANK = not asked or missing. Never recode these to "No".
 
@@ -45,7 +45,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Chronic Health Conditions Core; column: 138
 - Question: (Ever told) you had a heart attack, also called a myocardial infarction?
-- **Missing / unknown codes:** 7, 9, BLANK (2,568 records, 0.59%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** 7, 9, BLANK (2,568 records, 0.59%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** Outcome component (heart attack / MI).
 
 | Value | Label | Frequency | % | Weighted % |
@@ -60,7 +60,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Chronic Health Conditions Core; column: 139
 - Question: (Ever told) (you had) angina or coronary heart disease?
-- **Missing / unknown codes:** 7, 9, BLANK (4,231 records, 0.98%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** 7, 9, BLANK (4,231 records, 0.98%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** Outcome component. Label covers angina OR coronary heart disease: use this wording in the report.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -75,7 +75,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Chronic Health Conditions Core; column: 140
 - Question: (Ever told) (you had) a stroke.
-- **Missing / unknown codes:** 7, 9, BLANK (1,474 records, 0.34%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** 7, 9, BLANK (1,474 records, 0.34%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** Outcome component (stroke). Not part of _MICHD.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -90,7 +90,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Calculated Variables; column: 1994
 - Question: Respondents that have ever reported having coronary heart disease (CHD) or myocardial infarction (MI)
-- **Missing / unknown codes:** BLANK (4,585 records, 1.06%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** BLANK (4,585 records, 1.06%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** MI or CHD only. Does NOT include stroke, so CVD_ANY must be built from the three CVD* variables.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -105,7 +105,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Hypertension Awareness Core; column: 133
 - Question: Have you ever been told by a doctor, nurse or other health professional that you have high blood pressure? (If Yes - and respondent is female, ask Was this only when you were pregnant?.)
-- **Missing / unknown codes:** 7, 9, BLANK (1,919 records, 0.44%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** 7, 9, BLANK (1,919 records, 0.44%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** Raw item. 1 = yes; 2 = yes but only during pregnancy; 3 = no; 4 = told borderline/pre-hypertensive. Codes 2, 3 and 4 all become "No" (1) in _RFHYPE6.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -122,7 +122,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Calculated Variables; column: 1991
 - Question: Adults who have been told they have high blood pressure by a doctor, nurse, or other health professional
-- **Missing / unknown codes:** 9 (1,919 records, 0.44%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** 9 (1,919 records, 0.44%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** 1 = No, 2 = Yes (note the 1/2 coding), 9 = unknown. Group "No" includes pregnancy-only and borderline.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -135,7 +135,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Cholesterol Awareness Core; column: 135
 - Question: About how long has it been since you last had your cholesterol checked?
-- **Missing / unknown codes:** 7, 9, BLANK (26,449 records, 6.10%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** 7, 9, BLANK (26,449 records, 6.10%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** Raw item: time since last cholesterol check.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -155,7 +155,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Cholesterol Awareness Core; column: 136
 - Question: Have you ever been told by a doctor, nurse or other health professional that your cholesterol is high?
-- **Missing / unknown codes:** 7, 9, BLANK (55,084 records, 12.71%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** 7, 9, BLANK (55,084 records, 12.71%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** Raw item: ever told cholesterol high (only asked if checked).
 
 | Value | Label | Frequency | % | Weighted % |
@@ -170,7 +170,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Calculated Variables; column: 1993
 - Question: Adults who have had their cholesterol checked and have been told by a doctor, nurse, or other health professional that it was high
-- **Missing / unknown codes:** 9, BLANK (55,084 records, 12.71%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** 9, BLANK (55,084 records, 12.71%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** BLANK when never checked / unknown (not code 9). Decide how to treat "not checked".
 
 | Value | Label | Frequency | % | Weighted % |
@@ -184,7 +184,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Chronic Health Conditions Core; column: 149
 - Question: (Ever told) (you had) diabetes? (If Yes - and respondent is female, ask Was this only when you were pregnant? If Respondent says pre-diabetes or borderline diabetes, use response code 4.)
-- **Missing / unknown codes:** 7, 9, BLANK (984 records, 0.23%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** 7, 9, BLANK (984 records, 0.23%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** No calculated variable. 1 = yes; 2 = pregnancy only; 3 = no; 4 = pre-diabetes/borderline; 7/9 = unknown.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -201,7 +201,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Calculated Variables; column: 2082-2085
 - Question: Body Mass Index (BMI)
-- **Missing / unknown codes:** BLANK (40,535 records, 9.35%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** BLANK (40,535 records, 9.35%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** Stored with 2 implied decimals: divide by 100. Missing if height/weight unknown or pregnant.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -213,7 +213,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Calculated Variables; column: 2086
 - Question: Four-categories of Body Mass Index (BMI)
-- **Missing / unknown codes:** BLANK (40,535 records, 9.35%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** BLANK (40,535 records, 9.35%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** Proposal "obesity" = 4. Underweight=1, Normal=2, Overweight=3, Obese=4.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -228,7 +228,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Calculated Variables; column: 2087
 - Question: Adults who have a body mass index greater than 25.00 (Overweight or Obese)
-- **Missing / unknown codes:** 9 (40,535 records, 9.35%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** 9 (40,535 records, 9.35%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** Overweight OR obese (BMI >= 25). Not the same as obesity.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -241,7 +241,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Calculated Variables; column: 2091
 - Question: Four-level smoker status: Everyday smoker, Someday smoker, Former smoker, Non-smoker
-- **Missing / unknown codes:** 9 (23,062 records, 5.32%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** 9 (23,062 records, 5.32%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** Current smoker = 1 or 2; former = 3; never = 4; 9 = unknown.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -256,7 +256,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Calculated Variables; column: 2092
 - Question: Adults who are current smokers
-- **Missing / unknown codes:** 9 (23,062 records, 5.32%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** 9 (23,062 records, 5.32%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** 1 = No, 2 = Yes (current smoker), 9 = unknown.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -269,7 +269,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Exercise (Physical Activity) Core; column: 113
 - Question: During the past month, other than your regular job, did you participate in any physical activities or exercises such as running, calisthenics, golf, gardening, or walking for exercise?
-- **Missing / unknown codes:** 7, 9, BLANK (1,251 records, 0.29%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** 7, 9, BLANK (1,251 records, 0.29%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** Raw item: any physical activity in past 30 days (outside regular job).
 
 | Value | Label | Frequency | % | Weighted % |
@@ -284,7 +284,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Calculated Variables; column: 1902
 - Question: Adults who reported doing physical activity or exercise during the past 30 days other than their regular job
-- **Missing / unknown codes:** 9 (1,251 records, 0.29%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** 9 (1,251 records, 0.29%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** 1 = had activity, 2 = no activity (physical inactivity = 2), 9 = unknown.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -299,7 +299,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Calculated Variables; column: 2065-2066
 - Question: Fourteen-level age category
-- **Missing / unknown codes:** 14 (7,779 records, 1.80%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** 14 (7,779 records, 1.80%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** 14 levels; 14 = don't know/refused/missing.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -323,7 +323,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Calculated Variables; column: 2068-2069
 - Question: Imputed Age value collapsed above 80
-- **Missing / unknown codes:** none (0 records, 0.00%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** none (0 records, 0.00%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** Age capped at 80. _IMPAGE is not in the codebook.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -346,7 +346,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Calculated Variables; column: 2070
 - Question: Six-level imputed age category
-- **Missing / unknown codes:** none (0 records, 0.00%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** none (0 records, 0.00%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** Six-level age group from imputed age.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -362,7 +362,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Calculated Variables; column: 2064
 - Question: Calculated sex variable
-- **Missing / unknown codes:** none (0 records, 0.00%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** none (0 records, 0.00%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** Calculated sex (1 male, 2 female), derived from SEXVAR (counts differ by 18 records).
 
 | Value | Label | Frequency | % | Weighted % |
@@ -374,7 +374,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Respondent Sex; column: 88
 - Question: Sex of Respondent
-- **Missing / unknown codes:** none (0 records, 0.00%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** none (0 records, 0.00%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** Sex of respondent (raw).
 
 | Value | Label | Frequency | % | Weighted % |
@@ -386,7 +386,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Calculated Variables; column: 2090
 - Question: Income categories
-- **Missing / unknown codes:** 9 (86,623 records, 19.99%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** 9 (86,623 records, 19.99%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** 9 = unknown/refused (about 20% of records).
 
 | Value | Label | Frequency | % | Weighted % |
@@ -404,7 +404,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Calculated Variables; column: 2089
 - Question: Level of education completed
-- **Missing / unknown codes:** 9 (2,325 records, 0.54%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** 9 (2,325 records, 0.54%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** 9 = unknown/refused.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -419,7 +419,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Calculated Race Variables; column: 2060
 - Question: Race/ethnicity categories
-- **Missing / unknown codes:** 9, BLANK (9,570 records, 2.21%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** 9, BLANK (9,570 records, 2.21%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** Race/ethnicity, 9 = unknown. Optional for equity checks.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -439,7 +439,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Record Identification; column: 1-2
 - Question: State FIPS Code
-- **Missing / unknown codes:** none (0 records, 0.00%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** none (0 records, 0.00%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** State FIPS. 52 areas; Kentucky (21) and Pennsylvania (42) absent. Includes Guam, PR, USVI.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -503,7 +503,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Weighting Variables; column: 1749-1758
 - Question: Final weight assigned to each respondent: Land-line and cell-phone data (Raking derived weight)
-- **Missing / unknown codes:** none (0 records, 0.00%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** none (0 records, 0.00%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** Final survey weight (use for all prevalence estimates). Values hidden in the codebook.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -514,7 +514,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Weighting Variables; column: 1410-1415
 - Question: Sample Design Stratification Variable (Prior to 2011: _STSTR is a five digit number that combines the values for _STATE (first two characters), _GEOSTR (third and fourth character), and _DENSTR2 (final character).)
-- **Missing / unknown codes:** none (0 records, 0.00%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** none (0 records, 0.00%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** Stratum. Needed with _PSU for correct survey variance. Values hidden in the codebook.
 
 | Value | Label | Frequency | % | Weighted % |
@@ -525,7 +525,7 @@ Values are **raw codes as released by CDC**. No recoding has been done (M3 owns 
 
 - Codebook section: Record Identification; column: 36-45
 - Question: Primary Sampling Unit (Equal to Annual Sequence Number)
-- **Missing / unknown codes:** none (0 records, 0.00%). Keep as-is; M3 decides treatment.
+- **Missing / unknown codes:** none (0 records, 0.00%). Kept as-is in the working file; treatment is in the D2 cleaning log.
 - **Project note:** Primary sampling unit. Needed with _STSTR for survey variance. Values hidden in the codebook.
 
 | Value | Label | Frequency | % | Weighted % |
